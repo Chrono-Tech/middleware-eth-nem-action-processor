@@ -21,6 +21,13 @@ There are 2 cases, when you can recieve some mosaic's minutes on your presonal c
 
 Under the hood, this module tracks events from  [sc-processor](https://github.com/ChronoBank/middleware-eth-chrono-sc-processor). In case, we meet setHash event (which stands for user fill profile's action) or deposit event - we just grab the address of user, and amount of deposit (in case it's deposit event) - and transfer him mosaics on his NEM's address
 
+#### Settings
+
+To run this module, you will need:
+1) [eth-blockprocessor](https://github.com/ChronoBank/middleware-eth-blockprocessor) - This module is used for updating balances for registered accounts.
+2) [sc-processor](https://github.com/ChronoBank/middleware-eth-chrono-sc-processor) - this module is used for processing events, emitted on chronobank smart contracts. As mentioned above, it tracks setHash and deposit events.
+3) NIS node - The NEM Infrastructure Server. You can connect to a third-party node (mainnet or testnet) or deploy it locally. By default, the connection will be made to the local node (address: http://localhost:7890, network: testnet).
+
 ##### сonfigure your .env
 
 To apply your configuration, create a .env file in root folder of repo (in case it's not present already).
