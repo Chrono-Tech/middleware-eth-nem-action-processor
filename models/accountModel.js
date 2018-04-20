@@ -36,4 +36,4 @@ const Account = new mongoose.Schema({
   welcomeBonusSent: {type: Boolean, default: false}
 });
 
-module.exports = mongoose.accounts.model(`${config.mongo.accounts.collectionPrefix}Account`, Account);
+module.exports = mongoose.model(`${config.mongo.accounts.collectionPrefix}Account`, Account);

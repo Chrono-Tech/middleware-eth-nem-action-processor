@@ -3,8 +3,8 @@
 const accountModel = require('../../models/accountModel'),
     config = require('./config');
 
-module.exports = async () => {
+module.exports = async (address) => {
     return await accountModel.find({
-        address: config.address
+        address: address
     });
 }

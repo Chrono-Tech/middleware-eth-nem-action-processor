@@ -27,6 +27,10 @@ const config = {
   schedule: {
     job: process.env.SCHEDULE_NEM_JOB || '30 * * * * *'
   },
+  web3: {
+    network: process.env.NETWORK || 'development',
+    uri: `${/^win/.test(process.platform) ? '\\\\.\\pipe\\' : ''}${process.env.WEB3_URI || `/tmp/${(process.env.NETWORK || 'development')}/geth.ipc`}`
+  },
   nem: {
     network: process.env.NEM_NETWORK ? parseInt(process.env.NEM_NETWORK) : -104,
     mosaic: process.env.NEM_MOSAIC_NAME || 'cb:minutes',

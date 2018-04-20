@@ -4,10 +4,10 @@ const accountModel = require('../../models/accountModel'),
     config = require('./config');
 
 
-module.exports = async () => {
+module.exports = async (address) => {
 
     await accountModel.create({
-        address: config.address,
+        address: address,
         nem: config.nem_address
     });
 
