@@ -1,8 +1,11 @@
 {
-  "name": "middleware-eth-nem-action-processor",
-  "version": "0.0.0",
+  "name": "middleware_eth.nemActionProcessor",
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "requirements": {
+    "middleware_eth.chronoSCProcessor": "1.0.0"
+  },
   "scripts": {
     "lint": "node ./node_modules/eslint/bin/eslint.js -c .eslintrc.js --ext .js --fix --ignore-path .eslintignore .",
     "deploy:contracts": "cd ./node_modules/chronobank-smart-contracts && node --max_old_space_size=8000 ../truffle/build/cli.bundled.js migrate",
@@ -23,6 +26,7 @@
     "bignumber.js": "^4.1.0",
     "bunyan": "^1.8.12",
     "chronobank-smart-contracts": "1.1.*",
+    "middleware_common_infrastructure": "^1.0.3",
     "dotenv": "^4.0.0",
     "expect.js": "^0.3.1",
     "lodash": "^4.17.4",

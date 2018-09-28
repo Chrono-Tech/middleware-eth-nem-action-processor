@@ -80,6 +80,11 @@ The options are presented below:
 | NEM_PRIVATE_KEY   | NEM's private key from cold wallet, from which transfers will be emitted.
 | NEM_ACTIONS   | actions, you wish to run. Optional param. The default value is welcomeBonus,timeBonus, xemBonus
 | NEM_BONUS_RATE   | bonus convertation rate (is used to convert the deposit unit to mosaic's value). The default value is 60
+| SYSTEM_RABBIT_URI   | rabbitmq URI connection string for infrastructure
+| SYSTEM_RABBIT_SERVICE_NAME   | rabbitmq service name for infrastructure
+| SYSTEM_RABBIT_EXCHANGE   | rabbitmq exchange name for infrastructure
+| CHECK_SYSTEM | check infrastructure or not (default = true)
+| CHECK_WAIT_TIME | interval for wait respond from requirements
 | TIME_BONUS_RATE   | bonus convertation rate for xem bonus (xem/TIME_BONUS_RATE = nem chronobank:minute)
 | XEM_BONUS_WINDOW_START   | start block from which calculate the maximum balance
 | XEM_BONUS_WINDOW_END   | end block from which calculate the maximum balance
